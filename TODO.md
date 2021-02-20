@@ -88,10 +88,10 @@
 
 > syntax
 
-- [lang1] `Let` <: `Exp`
-- [lang1] `Let` syntax
+- [lang2] `Let` <: `Exp`
+- [lang2] `Let` syntax
 
-- [lang1] no `Begin` use `Let` instead
+- [lang2] no `Begin` use `Let` instead
   - `Exp` should not depend on `Stmt`
 
 - [lang2] simplify the interface `Stmt`

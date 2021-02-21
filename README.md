@@ -10,7 +10,7 @@
 - **lang4**: Simply typed jojo, Sequent calculus.
 - **lang5**: Untyped jojo, A theory of equivalence for untyped jojo (by placeholder value & application trace).
 
-# References
+## References
 
 - **Parsing**:
   - CFG: https://en.wikipedia.org/wiki/Context-free_grammar

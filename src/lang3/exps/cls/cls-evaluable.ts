@@ -19,20 +19,21 @@ export function cls_evaluable(
         new_sat.push({ name, t, value })
         Env.update(env, name, value)
       }
+
       if (scope.length === 0) {
         return Value.cls(
           new_sat,
           Value.Telescope.create(mod, env, undefined, new Array())
         )
-      } else {
-        const [entry, ...tail] = scope
-        const name = entry.name
-        const t = evaluate(entry.t, { mod, env, mode })
-        return Value.cls(
-          new_sat,
-          Value.Telescope.create(mod, env, { name, t }, tail)
-        )
       }
+
+      const [entry, ...tail] = scope
+      const name = entry.name
+      const t = evaluate(entry.t, { mod, env, mode })
+      return Value.cls(
+        new_sat,
+        Value.Telescope.create(mod, env, { name, t }, tail)
+      )
     },
   })
 }

@@ -35,12 +35,15 @@ function check_properties_aganst_sat(
     if (found === undefined) {
       throw new Trace.Trace(
         ut.aline(`
-|Can not found satisfied entry name: ${entry.name}
-|`)
+          |Can not found satisfied entry name: ${entry.name}
+          |`)
       )
     }
+
     Check.check(mod, ctx, found, entry.t)
+
     const value = evaluate(found, { mod, env: Ctx.to_env(ctx) })
+
     if (!Value.conversion(mod, ctx, entry.t, value, entry.value)) {
       const t_repr = Readback.readback(mod, ctx, Value.type, entry.t).repr()
       const value_repr = Readback.readback(mod, ctx, entry.t, value).repr()
@@ -56,6 +59,7 @@ function check_properties_aganst_sat(
           |`)
       )
     }
+
     properties.delete(entry.name)
   }
 }
@@ -87,8 +91,8 @@ function check_properties_aganst_next(
   if (found === undefined) {
     throw new Trace.Trace(
       ut.aline(`
-|Can not found next name: ${next.name}
-|`)
+        |Can not found next name: ${next.name}
+        |`)
     )
   }
   Check.check(mod, ctx, found, next.t)

@@ -42,20 +42,18 @@ function check_properties_aganst_sat(
     Check.check(mod, ctx, found, entry.t)
     const value = evaluate(found, { mod, env: Ctx.to_env(ctx) })
     if (!Value.conversion(mod, ctx, entry.t, value, entry.value)) {
+      const t_repr = Readback.readback(mod, ctx, Value.type, entry.t).repr()
+      const value_repr = Readback.readback(mod, ctx, entry.t, value).repr()
+      const found_repr = Readback.readback(mod, ctx, entry.t, entry.value).repr()
       throw new Trace.Trace(
         ut.aline(`
-|I am expecting the following two values to be the same ${Readback.readback(
-          mod,
-          ctx,
-          Value.type,
-          entry.t
-        ).repr()}.
-|But they are not.
-|The value in object:
-|  ${Readback.readback(mod, ctx, entry.t, value).repr()}
-|The value in partially filled class:
-|  ${Readback.readback(mod, ctx, entry.t, entry.value).repr()}
-|`)
+          |I am expecting the following two values to be the same ${t_repr}.
+          |But they are not.
+          |The value in object:
+          |  ${value_repr}
+          |The value in partially filled class:
+          |  ${found_repr}
+          |`)
       )
     }
     properties.delete(entry.name)

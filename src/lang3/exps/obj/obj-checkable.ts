@@ -88,6 +88,7 @@ function check_properties_aganst_next(
   next: { name: string; t: Value.Value }
 ): Value.Value {
   const found = properties.get(next.name)
+
   if (found === undefined) {
     throw new Trace.Trace(
       ut.aline(`
@@ -95,6 +96,7 @@ function check_properties_aganst_next(
         |`)
     )
   }
+
   Check.check(mod, ctx, found, next.t)
   properties.delete(next.name)
   return evaluate(found, { mod, env: Ctx.to_env(ctx) })

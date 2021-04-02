@@ -1,7 +1,6 @@
 import { Inferable } from "../../inferable"
 import { evaluate } from "../../evaluate"
 import * as Infer from "../../infer"
-
 import * as Exp from "../../exp"
 import * as Ctx from "../../ctx"
 import * as Trace from "../../../trace"

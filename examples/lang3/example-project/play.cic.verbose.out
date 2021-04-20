@@ -1,4 +1,4 @@
-// @file "/home/xyh/cicada/examples/lang3/example-project/play.cic"
+// @file "/home/xyh/lang/cicada/cicada-instars/examples/lang3/example-project/play.cic"
 
 "hi ^-^/"
 {
@@ -17,7 +17,7 @@ Nat.zero
 Nat.add1(Nat.zero)
 
 // @module cicada.datatype
-// @file "/home/xyh/cicada/examples/lang3/example-project/datatype/list.cic"
+// @file "/home/xyh/lang/cicada/cicada-instars/examples/lang3/example-project/datatype/list.cic"
 
 (_) => List(_)
 (T) => List.null(T)
@@ -29,7 +29,7 @@ Nat.zero
 Nat.add1(Nat.zero)
 
 // @module cicada.datatype
-// @file "/home/xyh/cicada/examples/lang3/example-project/datatype/nat.cic"
+// @file "/home/xyh/lang/cicada/cicada-instars/examples/lang3/example-project/datatype/nat.cic"
 
 Nat
 Nat.zero

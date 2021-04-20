@@ -1,6 +1,5 @@
 import { Evaluable } from "../../evaluable"
 import { Exp } from "../../exp"
-
 import { evaluate } from "../../evaluate"
 import * as Explain from "../../explain"
 import * as Mod from "../../mod"
@@ -83,6 +82,7 @@ export function do_dot_not_yet(
 ): Value.not_yet {
   if (not_yet.t.kind === "Value.cls")
     return Value.not_yet(
+      // TODO not_yet.t.sat should also be tried.
       Value.Telescope.dot(not_yet.t.tel, name),
       Neutral.dot(not_yet.neutral, name)
     )

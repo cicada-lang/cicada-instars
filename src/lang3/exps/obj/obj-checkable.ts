@@ -35,29 +35,31 @@ function check_properties_aganst_sat(
     if (found === undefined) {
       throw new Trace.Trace(
         ut.aline(`
-|Can not found satisfied entry name: ${entry.name}
-|`)
+          |Can not found satisfied entry name: ${entry.name}
+          |`)
       )
     }
+
     Check.check(mod, ctx, found, entry.t)
+
     const value = evaluate(found, { mod, env: Ctx.to_env(ctx) })
+
     if (!Value.conversion(mod, ctx, entry.t, value, entry.value)) {
+      const t_repr = Readback.readback(mod, ctx, Value.type, entry.t).repr()
+      const value_repr = Readback.readback(mod, ctx, entry.t, value).repr()
+      const found_repr = Readback.readback(mod, ctx, entry.t, entry.value).repr()
       throw new Trace.Trace(
         ut.aline(`
-|I am expecting the following two values to be the same ${Readback.readback(
-          mod,
-          ctx,
-          Value.type,
-          entry.t
-        ).repr()}.
-|But they are not.
-|The value in object:
-|  ${Readback.readback(mod, ctx, entry.t, value).repr()}
-|The value in partially filled class:
-|  ${Readback.readback(mod, ctx, entry.t, entry.value).repr()}
-|`)
+          |I am expecting the following two values to be the same ${t_repr}.
+          |But they are not.
+          |The value in object:
+          |  ${value_repr}
+          |The value in partially filled class:
+          |  ${found_repr}
+          |`)
       )
     }
+
     properties.delete(entry.name)
   }
 }
@@ -86,13 +88,15 @@ function check_properties_aganst_next(
   next: { name: string; t: Value.Value }
 ): Value.Value {
   const found = properties.get(next.name)
+
   if (found === undefined) {
     throw new Trace.Trace(
       ut.aline(`
-|Can not found next name: ${next.name}
-|`)
+        |Can not found next name: ${next.name}
+        |`)
     )
   }
+
   Check.check(mod, ctx, found, next.t)
   properties.delete(next.name)
   return evaluate(found, { mod, env: Ctx.to_env(ctx) })

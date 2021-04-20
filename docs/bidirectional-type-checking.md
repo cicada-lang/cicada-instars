@@ -23,6 +23,8 @@
   都可以阐释理解其为生成证明的函数。
   - 当这样做时，我们需要问 predicate
     所对应的 judgment 的 inference rules 是什么。
+  - 对于 Check 而言，我们先有的是 Check 这个 judgment 与其 inference rules，
+    然后再想办法去实现 check 这个 predicate。
 一、我发现只有当我能 infer ap 的 target，才能 check ap，
 二、而且，额外地，当我能 infer ap 的 target，我就不光能 check ap，并且也能 infer ap，
 三、为了 infer ap 的 target 我必须能够 infer fn，

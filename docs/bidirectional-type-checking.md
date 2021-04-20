@@ -9,7 +9,7 @@
 假设在 datatype 中定义数据构造子时，
 其类型所代表的是纯逻辑式编程。
 即所有的关系都是可逆的。
-- 但是在 dependent type system 额 judgment 中，情况不是如此，
+- 但是在 dependent type system 的 judgment 中，情况不是如此，
   因为 evaluate 不是可逆的。
 
 双向的类型检查在于，关系的单值性，即关系是否是函数。

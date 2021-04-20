@@ -19,6 +19,8 @@
 关于双向类型检查与函数单值性，有一个有趣的 story。
 首先要知道 Check 对第三个参数 t 的单值性，将给出函数 infer。
 假设我想实现函数 check 来自动生成关系 Check 的证明。
+- 所有的 predicate，在把它当作返回值为 bool 的函数之外，
+  都可以阐释理解其为生成证明的函数。
 一、我发现只有当我能 infer ap 的 target，才能 check ap，
 二、而且，额外地，当我能 infer ap 的 target，我就不光能 check ap，并且也能 infer ap，
 三、为了 infer ap 的 target 我必须能够 infer fn，

@@ -50,8 +50,6 @@ Check(ctx, Exp.fn(name, ret), Ty.arrow(arg_t, ret_t))
 ------------------------------------------------------- fn
 ret_ck: Check(Map.extend(ctx, name, arg_t), ret, ret_t)
 
-假设 Ty.arrow(arg_t, ret_t) 是未知的，
-因此 arg_t 是未知的，
-因此 arg_t 不应在 ret_ck 的类型的
-第一个参数 Map.extend(ctx, name, arg_t) 中出现，
+假设 Ty.arrow(arg_t, ret_t) 是未知的，因此 arg_t 是未知的，
+因此 arg_t 不应在 ret_ck 的类型的第一个参数 Map.extend(ctx, name, arg_t) 中出现，
 因此单值性检验失败。

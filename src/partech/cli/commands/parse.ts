@@ -7,7 +7,7 @@ import * as lexers from "../../lexers"
 import * as ut from "../../../ut"
 import fs from "fs"
 import path from "path"
-import strip_ansi from "strip-ansi"
+
 
 export const command = "parse <input>"
 
@@ -48,7 +48,7 @@ export const handler = async (argv: Argv) => {
         let message = error.message
         message += "\n"
         message += Span.report(error.span, text)
-        console.error(argv.nocolor ? strip_ansi(message) : message)
+        console.error(message)
         process.exit(1)
       } else {
         throw error

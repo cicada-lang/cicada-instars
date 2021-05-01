@@ -6,7 +6,7 @@ import { Value } from "../../value"
 import * as Trace from "../../../trace"
 import * as pt from "../../../partech"
 import fs from "fs"
-import strip_ansi from "strip-ansi"
+
 
 export const command = "eval <input>"
 
@@ -36,7 +36,7 @@ export const handler = async (argv: Argv) => {
       let message = error.message
       message += "\n"
       message += pt.Span.report(error.span, text)
-      console.error(argv.nocolor ? strip_ansi(message) : message)
+      console.error(message)
       process.exit(1)
     }
 

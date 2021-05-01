@@ -9,6 +9,7 @@
   "scripts": {
     "build": "npx tsc",
     "watch": "npx tsc --watch",
+    "test": "./dev t",
     "format": "npx prettier src examples --write"
   },
   "prettier": {
@@ -27,27 +28,26 @@
   "devDependencies": {
     "@types/assert": "^1.5.4",
     "@types/fs-readdir-recursive": "^1.0.0",
-    "@types/js-yaml": "^4.0.0",
+    "@types/js-yaml": "^4.0.1",
     "@types/nanoid": "^2.1.0",
-    "@types/node": "^14.14.37",
+    "@types/node": "^15.0.1",
     "prettier": "^2.2.1",
-    "typescript": "^4.2.3"
+    "typescript": "^4.2.4"
   },
   "dependencies": {
     "@types/deep-diff": "^1.0.0",
-    "@xieyuheng/test-runner": "^0.1.18",
-    "chalk": "^4.1.0",
+    "@xieyuheng/test-runner": "^0.1.20",
+    "chalk": "^4.1.1",
     "change-case": "^4.1.2",
     "deep-diff": "^1.0.2",
     "fast-deep-equal": "^3.1.3",
     "fast-glob": "^3.2.5",
     "fs-readdir-recursive": "^1.1.0",
-    "js-yaml": "^4.0.0",
+    "js-yaml": "^4.1.0",
     "nanoid": "^3.1.22",
     "portfinder": "^1.0.28",
     "readdirp": "^3.6.0",
     "regexp-match-indices": "^1.0.2",
-    "strip-ansi": "^6.0.0",
     "yargs": "^16.2.0"
   },
   "license": "GPL-3.0-or-later"

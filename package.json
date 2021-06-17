@@ -32,7 +32,7 @@
     "@types/nanoid": "^2.1.0",
     "@types/node": "^15.12.2",
     "prettier": "^2.3.1",
-    "typescript": "^4.3.2"
+    "typescript": "^4.3.4"
   },
   "dependencies": {
     "@types/deep-diff": "^1.0.0",

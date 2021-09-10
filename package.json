@@ -30,8 +30,8 @@
     "@types/fs-readdir-recursive": "^1.0.0",
     "@types/js-yaml": "^4.0.3",
     "@types/nanoid": "^2.1.0",
-    "@types/node": "^16.7.10",
-    "prettier": "^2.3.2",
+    "@types/node": "^16.9.1",
+    "prettier": "^2.4.0",
     "typescript": "^4.4.2"
   },
   "dependencies": {

@@ -8,13 +8,13 @@ Options:
   --nocolor                                           [boolean] [default: false]
 
 RangeError: Maximum call stack size exceeded
-    at Object.get [as JoJoValue] (/home/xyh/cicada-lang/cicada-instars/lib/lang5/values/index.js:4:72)
-    at Object.lookup_value (/home/xyh/cicada-lang/cicada-instars/lib/lang5/mod/mod.js:15:33)
-    at Object.execute (/home/xyh/cicada-lang/cicada-instars/lib/lang5/jos/var.js:18:36)
-    at /home/xyh/cicada-lang/cicada-instars/lib/lang5/jos/jojo.js:16:62
+    at new Map (<anonymous>)
+    at Object.lookup_value (/home/xyh/cicada-lang/old/cicada-instars/lib/lang5/mod/mod.js:16:37)
+    at Object.execute (/home/xyh/cicada-lang/old/cicada-instars/lib/lang5/jos/var.js:18:36)
+    at /home/xyh/cicada-lang/old/cicada-instars/lib/lang5/jos/jojo.js:16:62
     at Array.reduce (<anonymous>)
-    at Object.jos_execute (/home/xyh/cicada-lang/cicada-instars/lib/lang5/jos/jojo.js:16:37)
-    at Object.apply (/home/xyh/cicada-lang/cicada-instars/lib/lang5/values/jojo-value.js:7:100)
-    at apply (/home/xyh/cicada-lang/cicada-instars/lib/lang5/jos/apply.js:18:18)
-    at Object.execute (/home/xyh/cicada-lang/cicada-instars/lib/lang5/jos/var.js:22:30)
-    at /home/xyh/cicada-lang/cicada-instars/lib/lang5/jos/jojo.js:16:62
+    at Object.jos_execute (/home/xyh/cicada-lang/old/cicada-instars/lib/lang5/jos/jojo.js:16:37)
+    at Object.apply (/home/xyh/cicada-lang/old/cicada-instars/lib/lang5/values/jojo-value.js:7:100)
+    at apply (/home/xyh/cicada-lang/old/cicada-instars/lib/lang5/jos/apply.js:18:18)
+    at Object.execute (/home/xyh/cicada-lang/old/cicada-instars/lib/lang5/jos/var.js:22:30)
+    at /home/xyh/cicada-lang/old/cicada-instars/lib/lang5/jos/jojo.js:16:62

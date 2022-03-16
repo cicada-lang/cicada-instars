@@ -30,9 +30,9 @@
     "@types/fs-readdir-recursive": "^1.0.0",
     "@types/js-yaml": "^4.0.5",
     "@types/nanoid": "^2.1.0",
-    "@types/node": "^16.11.9",
-    "prettier": "^2.4.1",
-    "typescript": "^4.5.2"
+    "@types/node": "^17.0.21",
+    "prettier": "^2.6.0",
+    "typescript": "^4.6.2"
   },
   "dependencies": {
     "@types/deep-diff": "^1.0.1",
@@ -41,14 +41,14 @@
     "change-case": "^4.1.2",
     "deep-diff": "^1.0.2",
     "fast-deep-equal": "^3.1.3",
-    "fast-glob": "^3.2.7",
+    "fast-glob": "^3.2.11",
     "fs-readdir-recursive": "^1.1.0",
     "js-yaml": "^4.1.0",
-    "nanoid": "^3.1.30",
+    "nanoid": "^3.3.1",
     "portfinder": "^1.0.28",
     "readdirp": "^3.6.0",
     "regexp-match-indices": "^1.0.2",
-    "yargs": "^17.2.1"
+    "yargs": "^17.3.1"
   },
   "license": "GPL-3.0-or-later"
 }
